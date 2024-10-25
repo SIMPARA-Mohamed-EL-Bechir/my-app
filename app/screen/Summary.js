@@ -29,11 +29,9 @@ function Summary({ navigation, userData  }) {
                 <Text style={styles.label}>Race/Ethnie :</Text>
                 <Text style={styles.value}>{
                     userData.selectedRaceEthnicity == 1 ? 'Blanc'
-                    :userData.selectedRaceEthnicity ==2 ? 'Asiatique/Insulaire du Pacifique'
                     :userData.selectedRaceEthnicity ==3 ? 'Noir'
-                    :userData.selectedRaceEthnicity ==4 ? 'Amérindien'
                     :userData.selectedRaceEthnicity ==5 ? 'Autre/Mixte'
-                    :userData.selectedRaceEthnicity ==9 ? 'Inconnu'
+                    :userData.selectedRaceEthnicity ==9 ? 'Je ne sais pas'
                     :'Non renseigné'}
                 </Text>
             </View>
@@ -43,8 +41,8 @@ function Summary({ navigation, userData  }) {
                 <Text style={styles.value}>{
                     userData.selectedAgeFirst == 0 ? '0-29'
                     :userData.selectedAgeFirst ==1 ? '30+'
-                    :userData.selectedAgeFirst ==2 ? 'Nullipare'
-                    :userData.selectedAgeFirst ==9 ? 'Inconnu'
+                    :userData.selectedAgeFirst ==2 ? 'Sans enfant'
+                    :userData.selectedAgeFirst ==9 ? 'Je ne sais pas'
                     :'Non renseigné'}
                 </Text>            
             </View>
@@ -52,10 +50,10 @@ function Summary({ navigation, userData  }) {
             <View style={styles.infoContainer}>
                 <Text style={styles.label}>Nombre de Parent qui avait le Cancer de Sein</Text>
                 <Text style={styles.value}>{
-                    userData.selectedNrelbc == 0 ? 'Zero'
-                    :userData.selectedNrelbc == 1 ? 'Un'
+                    userData.selectedNrelbc == 0 ? '0'
+                    :userData.selectedNrelbc == 1 ? '1'
                     :userData.selectedNrelbc == 2 ? '2+'
-                    :userData.selectedNrelbc == 9 ? 'Inconnu'
+                    :userData.selectedNrelbc == 9 ? 'Je ne sais pas'
                     :'Non renseigné'}
                 </Text>
             </View>
@@ -65,7 +63,7 @@ function Summary({ navigation, userData  }) {
                 <Text style={styles.value}>{
                     userData.selectedHrt == 0 ? 'Non'
                     :userData.selectedHrt == 1 ? 'Oui'
-                    :userData.selectedHrt == 9 ? 'Inconnu'
+                    :userData.selectedHrt == 9 ? 'Je ne sais pas'
                     :'Non renseigné'}
                 </Text>
             </View>
@@ -77,7 +75,7 @@ function Summary({ navigation, userData  }) {
                     :userData.selectedDensity == 2 ? 'Densités fibro-glandulaires dispersées'
                     :userData.selectedDensity == 3 ? 'Densité hétérogène'
                     :userData.selectedDensity == 4 ? 'Densité extrêmement élevée'
-                    :userData.selectedDensity == 9 ? 'Inconnu ou système de mesure différent'
+                    :userData.selectedDensity == 9 ? 'Je ne sais pas'
                     :'Non renseigné'}
                 </Text>
             </View>
@@ -87,14 +85,14 @@ function Summary({ navigation, userData  }) {
                 <Text style={styles.value}>{
                     userData.statutMenopausique == 0 ? 'Pré-ménopausée'
                     :userData.statutMenopausique == 1 ? 'Post-ménopausée ou âge ≥ 55 ans'
-                    :userData.statutMenopausique == 9 ? 'Inconnu'
+                    :userData.statutMenopausique == 9 ? 'Je ne sais pas'
                     :'Non renseigné'}
                 </Text>
             </View>
 
             <View style={styles.infoContainer}>
                 <Text style={styles.label}>IMC (Indice de Masse Corporelle) :</Text>
-                <Text style={styles.value}>{(userData.weight / ((userData.height/100) * (userData.height/100))) || 'Non renseigné'}</Text>
+                <Text style={styles.value}>{(userData.weight / ((userData.height/100) * (userData.height/100)).toFixed(2)) || 'Non renseigné'}</Text>
             </View>
 
             <View style={styles.buttonContainer}>

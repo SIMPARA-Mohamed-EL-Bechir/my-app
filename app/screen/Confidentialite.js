@@ -21,7 +21,7 @@ function Confidentialite({ navigation }) {
 
       <View style={styles.buttonContainer}>
         <AppButton
-          title="Accepter"
+          title="Continuer"
           onPress={handleNext}
           style={styles.secondaryButton}
           textStyle={styles.secondaryButtonText}

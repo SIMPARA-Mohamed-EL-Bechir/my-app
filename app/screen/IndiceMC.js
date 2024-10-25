@@ -52,7 +52,7 @@ function IndiceMC({ navigation, userData, setUserData }) {
       ) : null}
       <View style={styles.buttonContainer}>
                     <AppButton 
-                    title="TERMINER" 
+                    title="Verifier" 
                     onPress={handleNext} 
                     style={styles.secondaryButton} 
                     textStyle={styles.secondaryButtonText} 

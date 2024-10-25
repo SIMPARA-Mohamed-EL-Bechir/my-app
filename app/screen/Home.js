@@ -46,7 +46,7 @@ function Home({navigation}) {
 const styles = StyleSheet.create({
         body:{
             backgroundColor:Colors.background,
-            height:800,
+            height:900,
         },
         container:{
           flex: 1,

@@ -15,13 +15,13 @@ function AntecedentMed({ navigation, userData, setUserData }) {
     const ageFirst = [
         { label: '0-29', value: '0' },
         { label: '30+', value: '1' },
-        { label: 'Nullipare', value: '2' },
-        { label: 'Je ne sais pas', value: '9' },// ne sais pas
+        { label: 'Sans enfant', value: '2' },
+        { label: 'Je ne sais pas', value: '9' },
     ];
 
     const nrelbc = [
-        { label: 'Zero', value: '0' },
-        { label: 'Un', value: '1' },
+        { label: '0', value: '0' },
+        { label: '1', value: '1' },
         { label: '2+', value: '2' },
         { label: 'Je ne sais pas', value: '9' },
     ]
@@ -55,7 +55,7 @@ function AntecedentMed({ navigation, userData, setUserData }) {
                     </View>
 
                     <View style={styles.pickerContainer}>
-                        <Text style={styles.label}>Combien de membres de votre famille de 1er degré ont eu le cancer ?</Text>
+                        <Text style={styles.label}>Combien de membres de votre famille de 1er degré * ont eu le cancer ?</Text>
                         <Dropdown
                             style={styles.picker}
                             data={nrelbc}
@@ -65,7 +65,11 @@ function AntecedentMed({ navigation, userData, setUserData }) {
                             value={selectedNrelbc}
                             onChange={item => setSelectedNrelbc(item.value)}
                         />
+                        <Text style={styles}>
+                          *mère, soeur, cousine et tante au 1er degré
+                        </Text>
                     </View>
+                    
 
                     <View style={styles.pickerContainer}>
                         <Text style={styles.label}>Suivez-vous actuellement un traitement hormonal substitutif (THS) ?</Text>

@@ -26,7 +26,7 @@ function DemarrageDiag({navigation}) {
                     <Text style={styles.buttonText}>COMMENCER</Text>
                 </TouchableOpacity>
                 <AppButton 
-                    title='ANNULER'
+                    title='REVENIR'
                     onPress={() => navigation.goBack()}
                     style={styles.secondaryButton}
                 />

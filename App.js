@@ -32,7 +32,11 @@ export default function App() {
           </Stack.Screen>
           <Stack.Screen 
             name="Home"
-            //options={{ headerLeft: null }}
+            options={
+              {
+                headerShown: null
+              }
+            }
             >
             {(props) => <Home {...props} userData={userData} setUserData={setUserData} />}
           </Stack.Screen>

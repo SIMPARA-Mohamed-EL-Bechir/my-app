@@ -23,9 +23,7 @@ function InformationDemo({ navigation, userData, setUserData }) {
 
   const raceEthnicities = [
     { label: 'Blanc', value: '1' },
-    { label: 'Asiatique/Insulaire du Pacifique', value: '2' },
     { label: 'Noir', value: '3' },
-    { label: 'Amérindien', value: '4' },
     { label: 'Autre/Mixte', value: '5' },
     { label: 'Je ne sais pas', value: '9' },
   ];
@@ -53,7 +51,7 @@ function InformationDemo({ navigation, userData, setUserData }) {
           />
         </View>
         <View style={styles.pickerContainer}>
-          <Text style={styles.label}>QUEL EST VOTRE RACE/ETHNIE</Text>
+          <Text style={styles.label}>QUEL EST VOTRE ETHNIE</Text>
           <Dropdown
             style={styles.picker}
             data={raceEthnicities}
